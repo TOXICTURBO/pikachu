@@ -39,7 +39,7 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid,'Pikachu Bot created by *Turbo*' , MessageType.text);
         }
         else {
-            await message.client.sendMessage(message.jid,Config.PLK + '*TURBO IS A LEGEND*', MessageType.text);
+            await message.client.sendMessage(message.jid,Config.PLK + '*BOT MAKER TURBO https:/wa.me/916380260672*', MessageType.text);
         }
     }));
 }
