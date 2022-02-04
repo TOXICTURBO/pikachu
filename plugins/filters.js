@@ -123,7 +123,6 @@ await message.client.sendMessage(message.jid, fs.readFileSync('./uploads/@994407
         if (!!message.mention && message.mention[0] == '916380260672@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./uploads/TURBO MODS BOTS LEGEND.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,duration: Config.SAID, quoted : message.data, ptt: true})
         }
-        }
         if (!!message.mention && message.mention[0] == '919952552760@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./uploads/@919952552760.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,duration: Config.SAID, quoted : message.data, ptt: true})
         }    
