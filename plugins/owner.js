@@ -1,45 +1,39 @@
-const Asena = require('../events');
+const Julie = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
-const {spawnSync} = require('child_process');
 const Config = require('../config');
-const chalk = require('chalk');
-
-const Language = require('../language');
-const Lang = Language.getString('system_stats');
-
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'owner', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+    Julie.addCommand({pattern: 'owner', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
 
-        if (message.jid === '15369524516-1612300121@g.us') {
+        if (message.jid === '917025868709-1634557305@g.us') {
 
             return;
         }
 
-        if (Config.PLK == 'default') {
-            await message.client.sendMessage(message.jid,'Pikachu Bot created by *Turbo*' , MessageType.text);
+        if (Config.OWNER == 'default') {
+            await message.client.sendMessage(message.jid,'*AJUSER created by Turbo*' , MessageType.text);
         }
         else {
-            await message.client.sendMessage(message.jid,Config.PLK + '\n\n---------------------', MessageType.text);
+            await message.client.sendMessage(message.jid,Config.OWNER + '\n AJUSER created by Turbo', MessageType.text);
         }
     }));
 }
 
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'owner', fromMe: false, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+    Julie.addCommand({pattern: 'owner', fromMe: false, desc: 'shows the detail of bot owner'}, (async (message, match) => {
 
-        if (message.jid === '54218542512-1612300121@g.us') {
+        if (message.jid === '917025868709-1634557305@g.us') {
 
             return;
         }
 
-        if (Config.PLK == 'default') {
-            await message.client.sendMessage(message.jid,'Pikachu Bot created by *Turbo*' , MessageType.text);
+        if (Config.OWNER == 'default') {
+            await message.client.sendMessage(message.jid,'*AJUSER created by Turbo*' , MessageType.text);
         }
         else {
-            await message.client.sendMessage(message.jid,Config.PLK + '*BOT MAKER TURBO https:/wa.me/916380260672*', MessageType.text);
+            await message.client.sendMessage(message.jid,Config.OWNER + '\n AJUSER created by Turbo', MessageType.text);
         }
     }));
 }
